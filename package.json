@@ -1,0 +1,37 @@
+{
+  "name": "lazy-map",
+  "version": "0.1.0",
+  "description": "Create object mappings that have lazily-evaluated properties",
+  "keywords": [
+    "lazy",
+    "map"
+  ],
+  "author": "jpage@godaddy.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DullReferenceException/lazy-map/issues"
+  },
+  "homepage": "https://github.com/DullReferenceException/lazy-map#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DullReferenceException/lazy-map.git"
+  },
+  "main": "./lib",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "jest": "^24.9.0",
+    "rimraf": "^2.7.1",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "clean": "rimraf lib/*.js test/*.js",
+    "prepack": "npm run test && npm run build",
+    "postpack": "npm run clean"
+  }
+}
